@@ -16,7 +16,7 @@ export default {
 
   getListsFromBoard (boardId) {
     const query = db.ref('/lists').orderByChild('board').equalTo(boardId)
-    return query.once
+    return query.once('value')
   },
 
   postList (board, name) {

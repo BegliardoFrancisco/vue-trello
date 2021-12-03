@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Mis Paneles</h3>
-    <div class="boards-collection"></div>
+    <div class="boards-collection">
       <span v-if="fechingData">Cargando...</span>
       <input type="text"
       placeholder="Añade un nuevo panel"
@@ -12,8 +12,9 @@
       v-for="(board,index) in boards"
       :key="index"
       :name="board.name"
-      :id="board.id"></board-card>
+      :id="`${board.id}`"></board-card>
     </div>
+  </div>
 </template>
 
 <script>

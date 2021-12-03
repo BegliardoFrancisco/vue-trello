@@ -12,7 +12,7 @@ export default {
   },
 
   // fetch via ajax de listas asociadas a un panel
-  fetchList ({ commit }, { board }) {
+  fetchLists ({ commit }, { board }) {
     commit(types.FETCH_LISTS_REQUEST)
 
     API.getListsFromBoard(board)
